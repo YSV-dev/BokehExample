@@ -1,0 +1,12 @@
+{
+	"db": {
+		"main": {
+			"type": "PostgreSQL",
+			"host": "localhost",
+			"port": 5000,
+			"db_name": "test_db",
+			"db_user": "client",
+			"db_password": "client"
+		}
+	}
+}
