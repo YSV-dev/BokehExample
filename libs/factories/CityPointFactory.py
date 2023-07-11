@@ -26,10 +26,12 @@ class CityPointFactory:
             node_from = row.get("from")
             node_to = row.get("to")
             weight = row.get("weight")
-
-            x0, y0 = self._node_coords[node_from]
-            x1, y1 = self._node_coords[node_to]
-            result_list.append(CityConnection(-1, node_from, node_to, x0, y0, x1, y1, weight))
+            try:
+                x0, y0 = self._node_coords[node_from]
+                x1, y1 = self._node_coords[node_to]
+                result_list.append(CityConnection(-1, node_from, node_to, x0, y0, x1, y1, weight))
+            except Exception as e:
+                print(e)
         return result_list
 
     def getObjects(self):
